@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="273" viewBox="0 0 900 273" role="img" aria-label="Profile signal">
+<title>Profile signal</title>
+<defs>
+  <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0c3b37"/><stop offset=".5" stop-color="#082a2a"/><stop offset="1" stop-color="#061f22"/>
+  </linearGradient>
+  <radialGradient id="glowT" cx=".16" cy=".02" r=".62">
+    <stop offset="0" stop-color="#2fd0b0" stop-opacity=".55"/><stop offset="1" stop-color="#2fd0b0" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="glowB" cx=".96" cy=".98" r=".5">
+    <stop offset="0" stop-color="#3b7be0" stop-opacity=".6"/><stop offset="1" stop-color="#3b7be0" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="glowR" cx=".98" cy=".5" r=".35">
+    <stop offset="0" stop-color="#1fa98f" stop-opacity=".25"/><stop offset="1" stop-color="#1fa98f" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#021a1c" stop-opacity=".55"/><stop offset="1" stop-color="#02161a" stop-opacity=".7"/>
+  </linearGradient>
+  <clipPath id="clipCard"><rect width="900" height="273" rx="28"/></clipPath>
+</defs>
+<g clip-path="url(#clipCard)">
+  <rect width="900" height="273" fill="url(#base)"/>
+  <rect width="900" height="273" fill="url(#glowT)"/>
+  <rect width="900" height="273" fill="url(#glowR)"/>
+  <rect width="900" height="273" fill="url(#glowB)"/>
+</g>
+<rect x=".75" y=".75" width="898.5" height="271.5" rx="27.5" fill="none" stroke="#3fd0b4" stroke-opacity=".38" stroke-width="1.5"/>
+<rect x="26" y="26" width="848" height="221" rx="22" fill="url(#panel)" stroke="#3fd0b4" stroke-opacity=".45" stroke-width="1"/>
+<circle cx="848" cy="52" r="3.5" fill="#2fbf9f"><animate attributeName="opacity" values=".35;1;.35" dur="4s" repeatCount="indefinite"/></circle>
+<text x="46" y="68" font-family="Roboto,'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="25" font-weight="800" fill="#bff5e8">Profile Signal</text>
+<text x="47" y="88" font-family="Roboto,'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#4fe3c1">Live GitHub stats, drawn from your public profile</text>
+<rect x="34" y="106" width="196" height="128" rx="20" fill="#01100f" fill-opacity=".72" stroke="#3fd0b4" stroke-opacity=".5"/>
+<text x="54" y="139" font-family="Roboto,'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="700" letter-spacing=".6" fill="#bff5e8">Stars</text>
+<text x="53" y="184" font-family="Roboto,'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="35" font-weight="800" fill="#4fe3c1">0</text>
+<rect x="54" y="203" width="156" height="7" rx="3.5" fill="#ffffff" fill-opacity=".1"/><rect x="54" y="203" width="12.5" height="7" rx="3.5" fill="#4fe3c1"/>
+<rect x="246" y="106" width="196" height="128" rx="20" fill="#01100f" fill-opacity=".72" stroke="#3fd0b4" stroke-opacity=".5"/>
+<text x="266" y="139" font-family="Roboto,'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="700" letter-spacing=".6" fill="#bff5e8">Contributions</text>
+<text x="265" y="184" font-family="Roboto,'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="35" font-weight="800" fill="#8b6cf0">0</text>
+<rect x="266" y="203" width="156" height="7" rx="3.5" fill="#ffffff" fill-opacity=".1"/><rect x="266" y="203" width="12.5" height="7" rx="3.5" fill="#8b6cf0"/>
+<rect x="458" y="106" width="196" height="128" rx="20" fill="#01100f" fill-opacity=".72" stroke="#3fd0b4" stroke-opacity=".5"/>
+<text x="478" y="139" font-family="Roboto,'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="700" letter-spacing=".6" fill="#bff5e8">Repos</text>
+<text x="477" y="184" font-family="Roboto,'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="35" font-weight="800" fill="#4b7bec">0</text>
+<rect x="478" y="203" width="156" height="7" rx="3.5" fill="#ffffff" fill-opacity=".1"/><rect x="478" y="203" width="12.5" height="7" rx="3.5" fill="#4b7bec"/>
+<rect x="670" y="106" width="196" height="128" rx="20" fill="#01100f" fill-opacity=".72" stroke="#3fd0b4" stroke-opacity=".5"/>
+<text x="690" y="139" font-family="Roboto,'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="700" letter-spacing=".6" fill="#bff5e8">Followers</text>
+<text x="689" y="184" font-family="Roboto,'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="35" font-weight="800" fill="#22d3ee">0</text>
+<rect x="690" y="203" width="156" height="7" rx="3.5" fill="#ffffff" fill-opacity=".1"/><rect x="690" y="203" width="12.5" height="7" rx="3.5" fill="#22d3ee"/>
+</svg>
