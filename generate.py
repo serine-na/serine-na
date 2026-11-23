@@ -27,14 +27,16 @@ from datetime import datetime, timezone
 from xml.sax.saxutils import escape
 
 # ───────────────────────────── CONFIG ─────────────────────────────
-USERNAME = os.environ.get("PROFILE_USER", "YOUR_GITHUB_USERNAME")
-DISPLAY_NAME = os.environ.get("PROFILE_NAME", "")          # empty → name from GitHub
-TAGLINE = os.environ.get("PROFILE_TAGLINE", "")            # empty → bio from GitHub
+USERNAME = os.environ.get("PROFILE_USER", "serine-na")
+DISPLAY_NAME = os.environ.get("PROFILE_NAME", "Serine")
+TAGLINE = os.environ.get("PROFILE_TAGLINE", "")            # empty → your GitHub bio, nothing invented
 SOCIALS = [  # label, handle, (more entries become extra pills)
     ("GitHub", "@" + USERNAME),
     # ("LinkedIn", "@your-handle"),
 ]
-OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets")
+HERE = os.path.dirname(os.path.abspath(__file__))
+OUT_DIR = os.path.join(HERE, "assets")
+AVATAR_FILE = os.path.join(OUT_DIR, "avatar.jpg")   # your own picture, embedded as-is
 PROJECT_COUNT = 4
 
 PALETTE = {
@@ -68,12 +70,18 @@ def _json(url, token=None, data=None):
     return json.loads(_req(url, token, data))
 
 
+def local_avatar():
+    if os.path.exists(AVATAR_FILE):
+        with open(AVATAR_FILE, "rb") as f:
+            return "data:image/jpeg;base64," + base64.b64encode(f.read()).decode()
+    return None
+
+
 def offline_data():
     return {
-        "name": DISPLAY_NAME or "YOUR_NAME", "login": USERNAME,
-        "bio": TAGLINE or "Your tagline goes here.",
-        "avatar": None, "stars": 0, "repos": 0, "followers": 0,
-        "languages": ["HTML", "JavaScript", "Python", "Shell"],
+        "name": DISPLAY_NAME or USERNAME, "login": USERNAME,
+        "bio": TAGLINE, "avatar": local_avatar(), "stars": 0, "repos": 0, "followers": 0,
+        "languages": [],
         "total": 0, "days": [[0] * 7 for _ in range(53)],
         "active": 0, "busiest": 0, "projects": [],
     }
@@ -134,12 +142,13 @@ def live_data(token):
         except Exception:
             p["pct"] = 0
 
-    avatar = None
-    try:
-        raw = _req(u["avatar_url"] + ("&" if "?" in u["avatar_url"] else "?") + "s=160")
-        avatar = "data:image/jpeg;base64," + base64.b64encode(raw).decode()
-    except Exception:
-        pass
+    avatar = local_avatar()          # your own picture wins; GitHub's avatar is only a fallback
+    if not avatar:
+        try:
+            raw = _req(u["avatar_url"] + ("&" if "?" in u["avatar_url"] else "?") + "s=160")
+            avatar = "data:image/jpeg;base64," + base64.b64encode(raw).decode()
+        except Exception:
+            pass
     return {
         "name": DISPLAY_NAME or u.get("name") or u["login"], "login": u["login"],
         "bio": TAGLINE or u.get("bio") or "", "avatar": avatar, "stars": stars,
@@ -289,6 +298,11 @@ def city(d):
           f'<text x="36" y="394" font-family="{MONO}" font-size="12" fill="{p["teal"]}" fill-opacity=".85">@{esc(d["login"])}</text>\n'
           f'<text x="36" y="412" font-family="{SANS}" font-size="10.5" fill="{p["muted"]}" fill-opacity=".7">Isometric contribution view, drawn from GitHub data</text>\n')
 
+    s += f'<text x="36" y="214" font-family="{SANS}" font-size="10.5" fill="{p["muted"]}">Less</text>'
+    for n, col in enumerate(("#19716a", "#27a592", "#34c9ae", "#58e6c4", "#9bf5dc")):
+        s += f'<rect x="{66+n*16}" y="205" width="12" height="12" rx="3" fill="{col}"/>'
+    s += f'<text x="152" y="214" font-family="{SANS}" font-size="10.5" fill="{p["muted"]}">More</text>\n'
+
     a, b = 10.5, 5.5              # iso half-width / half-height of one cell
     ox, oy = 322, 96              # projection origin
     mx = max(d["busiest"], 1)
@@ -357,12 +371,18 @@ def projects(d):
     s += card_shell(W, H, 0, dot=False)
     s += (f'<text x="36" y="56" font-family="{MONO}" font-size="12" letter-spacing="2.4" fill="{p["teal"]}">PROJECTS.LIST</text>\n'
           f'<text x="190" y="56" font-family="{MONO}" font-size="12" fill="{p["muted"]}">./projects.sh --all</text>\n'
-          f'<text x="864" y="56" text-anchor="end" font-family="{MONO}" font-size="12" fill="{p["muted"]}">{len(d["projects"])} projects</text>\n'
+          f'<text x="864" y="56" text-anchor="end" font-family="{MONO}" font-size="12" fill="{p["muted"]}">{len(d["projects"])} project{"" if len(d["projects"]) == 1 else "s"}</text>\n'
           f'<line x1="36" y1="72" x2="864" y2="72" stroke="{p["border"]}" stroke-opacity=".45"/>\n')
     pw, ph, gx, gy, x0, y0 = 407, 184, 14, 14, 36, 98
-    for k in range(4):
+    if not d["projects"]:
+        s += (f'<rect x="36" y="98" width="828" height="{ph*2+gy}" rx="14" fill="#02181a" fill-opacity=".78" '
+              f'stroke="{p["border"]}" stroke-opacity=".5"/>\n'
+              f'<text x="450" y="{98+ph+gy/2-4}" text-anchor="middle" font-family="{MONO}" font-size="15" fill="{p["text"]}">No pinned repositories yet<tspan fill="{p["teal"]}"> _</tspan></text>\n'
+              f'<text x="450" y="{98+ph+gy/2+20}" text-anchor="middle" font-family="{MONO}" font-size="12" fill="{p["muted"]}">Pin repositories on your profile and they will appear here.</text>\n')
+        return s + "</svg>\n"
+    for k in range(min(4, len(d["projects"]))):
         x, y = x0 + (k % 2) * (pw + gx), y0 + (k // 2) * (ph + gy)
-        pr = d["projects"][k] if k < len(d["projects"]) else None
+        pr = d["projects"][k]
         s += (f'<rect x="{x}" y="{y}" width="{pw}" height="{ph}" rx="14" fill="#02181a" fill-opacity=".78" '
               f'stroke="{p["border"]}" stroke-opacity=".5"/>\n'
               f'<line x1="{x}" y1="{y+34}" x2="{x+pw}" y2="{y+34}" stroke="{p["border"]}" stroke-opacity=".4"/>\n')
