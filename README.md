@@ -1,5 +1,4 @@
-
-<img src="assets/hero.svg" alt="serine - profile card" width="100%">
+<img src="assets/hero.svg" alt="Serine - profile card" width="100%">
 
 ## The city I built this year
 
@@ -21,4 +20,4 @@
 
 <p align="center"><a href="https://github.com/serine-na">GitHub</a></p>
 
-<p align="center">SERINE · Contribution city drawn from GitHub data</p>
+<p align="center">Serine · Contribution city drawn from GitHub data</p>
