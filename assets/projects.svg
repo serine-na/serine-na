@@ -29,40 +29,7 @@
 <text x="190" y="56" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="12" fill="#7fd6c6">./projects.sh --all</text>
 <text x="864" y="56" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="12" fill="#7fd6c6">0 projects</text>
 <line x1="36" y1="72" x2="864" y2="72" stroke="#3fd0b4" stroke-opacity=".45"/>
-<rect x="36" y="98" width="407" height="184" rx="14" fill="#02181a" fill-opacity=".78" stroke="#3fd0b4" stroke-opacity=".5"/>
-<line x1="36" y1="132" x2="443" y2="132" stroke="#3fd0b4" stroke-opacity=".4"/>
-<text x="52" y="120" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="11.5" fill="#7fd6c6">• your-repository</text>
-<circle cx="427" cy="115" r="3.5" fill="#4aa898"/>
-<text x="54" y="166" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="19" font-weight="700" fill="#e8fffa">your-repository <tspan fill="#4fe3c1">_</tspan></text>
-<text x="54" y="191" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="12" fill="#a9ddd2">Add a description to this repository.</text>
-<rect x="52" y="226" width="50" height="20" rx="10" fill="#0a3b36" stroke="#4fe3c1" stroke-opacity=".5"/><text x="77" y="240" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="10.5" fill="#4fe3c1">Code</text>
-<text x="54" y="269" font-family="Roboto,'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" fill="#f2cc60">★</text><text x="70" y="269" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="11.5" fill="#bfe9df">0</text><text x="102" y="269" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="11.5" fill="#7fd6c6">updated —</text>
-<circle cx="391" cy="196" r="22" fill="none" stroke="#2a6a9a" stroke-opacity=".55" stroke-width="7"/><circle cx="391" cy="196" r="22" fill="none" stroke="#4fe3c1" stroke-width="7" stroke-dasharray="0.0 138.2" transform="rotate(-90 391 196)"/><text x="391" y="200" text-anchor="middle" font-family="Roboto,'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="11.5" font-weight="800" fill="#fff">0%</text>
-<rect x="457" y="98" width="407" height="184" rx="14" fill="#02181a" fill-opacity=".78" stroke="#3fd0b4" stroke-opacity=".5"/>
-<line x1="457" y1="132" x2="864" y2="132" stroke="#3fd0b4" stroke-opacity=".4"/>
-<text x="473" y="120" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="11.5" fill="#7fd6c6">• your-repository</text>
-<circle cx="848" cy="115" r="3.5" fill="#4aa898"/>
-<text x="475" y="166" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="19" font-weight="700" fill="#e8fffa">your-repository <tspan fill="#4fe3c1">_</tspan></text>
-<text x="475" y="191" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="12" fill="#a9ddd2">Add a description to this repository.</text>
-<rect x="473" y="226" width="50" height="20" rx="10" fill="#0a3b36" stroke="#4fe3c1" stroke-opacity=".5"/><text x="498" y="240" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="10.5" fill="#4fe3c1">Code</text>
-<text x="475" y="269" font-family="Roboto,'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" fill="#f2cc60">★</text><text x="491" y="269" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="11.5" fill="#bfe9df">0</text><text x="523" y="269" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="11.5" fill="#7fd6c6">updated —</text>
-<circle cx="812" cy="196" r="22" fill="none" stroke="#2a6a9a" stroke-opacity=".55" stroke-width="7"/><circle cx="812" cy="196" r="22" fill="none" stroke="#4fe3c1" stroke-width="7" stroke-dasharray="0.0 138.2" transform="rotate(-90 812 196)"/><text x="812" y="200" text-anchor="middle" font-family="Roboto,'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="11.5" font-weight="800" fill="#fff">0%</text>
-<rect x="36" y="296" width="407" height="184" rx="14" fill="#02181a" fill-opacity=".78" stroke="#3fd0b4" stroke-opacity=".5"/>
-<line x1="36" y1="330" x2="443" y2="330" stroke="#3fd0b4" stroke-opacity=".4"/>
-<text x="52" y="318" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="11.5" fill="#7fd6c6">• your-repository</text>
-<circle cx="427" cy="313" r="3.5" fill="#4aa898"/>
-<text x="54" y="364" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="19" font-weight="700" fill="#e8fffa">your-repository <tspan fill="#4fe3c1">_</tspan></text>
-<text x="54" y="389" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="12" fill="#a9ddd2">Add a description to this repository.</text>
-<rect x="52" y="424" width="50" height="20" rx="10" fill="#0a3b36" stroke="#4fe3c1" stroke-opacity=".5"/><text x="77" y="438" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="10.5" fill="#4fe3c1">Code</text>
-<text x="54" y="467" font-family="Roboto,'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" fill="#f2cc60">★</text><text x="70" y="467" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="11.5" fill="#bfe9df">0</text><text x="102" y="467" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="11.5" fill="#7fd6c6">updated —</text>
-<circle cx="391" cy="394" r="22" fill="none" stroke="#2a6a9a" stroke-opacity=".55" stroke-width="7"/><circle cx="391" cy="394" r="22" fill="none" stroke="#4fe3c1" stroke-width="7" stroke-dasharray="0.0 138.2" transform="rotate(-90 391 394)"/><text x="391" y="398" text-anchor="middle" font-family="Roboto,'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="11.5" font-weight="800" fill="#fff">0%</text>
-<rect x="457" y="296" width="407" height="184" rx="14" fill="#02181a" fill-opacity=".78" stroke="#3fd0b4" stroke-opacity=".5"/>
-<line x1="457" y1="330" x2="864" y2="330" stroke="#3fd0b4" stroke-opacity=".4"/>
-<text x="473" y="318" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="11.5" fill="#7fd6c6">• your-repository</text>
-<circle cx="848" cy="313" r="3.5" fill="#4aa898"/>
-<text x="475" y="364" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="19" font-weight="700" fill="#e8fffa">your-repository <tspan fill="#4fe3c1">_</tspan></text>
-<text x="475" y="389" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="12" fill="#a9ddd2">Add a description to this repository.</text>
-<rect x="473" y="424" width="50" height="20" rx="10" fill="#0a3b36" stroke="#4fe3c1" stroke-opacity=".5"/><text x="498" y="438" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="10.5" fill="#4fe3c1">Code</text>
-<text x="475" y="467" font-family="Roboto,'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" fill="#f2cc60">★</text><text x="491" y="467" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="11.5" fill="#bfe9df">0</text><text x="523" y="467" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="11.5" fill="#7fd6c6">updated —</text>
-<circle cx="812" cy="394" r="22" fill="none" stroke="#2a6a9a" stroke-opacity=".55" stroke-width="7"/><circle cx="812" cy="394" r="22" fill="none" stroke="#4fe3c1" stroke-width="7" stroke-dasharray="0.0 138.2" transform="rotate(-90 812 394)"/><text x="812" y="398" text-anchor="middle" font-family="Roboto,'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="11.5" font-weight="800" fill="#fff">0%</text>
+<rect x="36" y="98" width="828" height="382" rx="14" fill="#02181a" fill-opacity=".78" stroke="#3fd0b4" stroke-opacity=".5"/>
+<text x="450" y="285.0" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#e8fffa">No pinned repositories yet<tspan fill="#4fe3c1"> _</tspan></text>
+<text x="450" y="309.0" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="12" fill="#7fd6c6">Pin repositories on your profile and they will appear here.</text>
 </svg>
